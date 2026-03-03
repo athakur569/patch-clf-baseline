@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "patch-clf-baseline"
+version = "0.1.0"
+description = "ResNet-50 patch classifier baseline for computational pathology"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Abhishek Thakur", email = "a.thakur5690@gmail.com"}]
+requires-python = ">=3.10"
+keywords = ["digital-pathology", "patch-classification", "ResNet", "PyTorch-Lightning"]
+dependencies = [
+    "torch>=2.0.0",
+    "torchvision>=0.15.0",
+    "pytorch-lightning>=2.0.0",
+    "torchmetrics>=1.0.0",
+    "pandas>=2.0.0",
+    "numpy>=1.24.0",
+    "Pillow>=10.0.0",
+    "wandb>=0.15.0",
+    "tqdm>=4.65.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
